@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617;
+  /* Dark Slate 950 */
+  --color-foreground: #F8FAFC;
+  /* Slate 50 */
+
+  --color-primary: #FBC02D;
+  /* Honey Yellow */
+  --color-primary-hover: #F9A825;
+
+  --color-secondary: #0F172A;
+  /* Dark Slate 900 */
+
+  --color-accent: #22D3EE;
+  /* Cyan 400 - Matching the Image Neon */
+  --color-accent-foreground: #020617;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Utilities for image blending */
+@utility mask-radial-faded {
+  mask-image: radial-gradient(circle at center, black 40%, transparent 70%);
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 70%);
+}
+
+/* Base resets */
+:root {
+  --background: #020617;
+  --foreground: #F8FAFC;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
