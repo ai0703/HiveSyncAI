@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { BeeSwarm } from "@/components/ui/BeeSwarm";
 import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
+    const CALENDLY_LINK = "https://calendly.com/alfasamad07/hivesync-ai-ai-growth-consultation";
+
     return (
         <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-[#020617]">
 
@@ -24,7 +27,7 @@ export function Hero() {
 
             {/* Overlay: Bee Swarm Animation (Particles) */}
             <div className="absolute inset-0 z-10 pointer-events-none">
-                <BeeSwarm /> {/* Ensure BeeSwarm is updated to be transparent/fill container */}
+                <BeeSwarm />
             </div>
 
             {/* Foreground Content */}
@@ -45,9 +48,11 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" className="bg-primary hover:bg-primary-hover text-secondary font-bold text-lg px-10 py-6 h-auto rounded-full shadow-[0_0_20px_rgba(251,192,45,0.4)] hover:shadow-[0_0_30px_rgba(251,192,45,0.6)] transition-all transform hover:scale-105">
-                            Enter the Hive
-                        </Button>
+                        <Link href={CALENDLY_LINK} target="_blank">
+                            <Button size="lg" className="bg-primary hover:bg-primary-hover text-secondary font-bold text-lg px-10 py-6 h-auto rounded-full shadow-[0_0_20px_rgba(251,192,45,0.4)] hover:shadow-[0_0_30px_rgba(251,192,45,0.6)] transition-all transform hover:scale-105">
+                                Get in Touch
+                            </Button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>
